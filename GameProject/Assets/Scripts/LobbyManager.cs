@@ -25,20 +25,30 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
 
     #region Unity Methods
-    
+
     void Start()
     {
-        UI_LobbyGameObject.SetActive(false);
-        UI_3DGameObject.SetActive(false);
-        UI_ConnectionStatusGameObject.SetActive(false);
-
-        UI_LoginGameObject.SetActive(true);
+        // if already connected, no need to login any more
+        if (PhotonNetwork.IsConnected)
+        {
+            UI_LobbyGameObject.SetActive(true);
+            UI_3DGameObject.SetActive(true);
+            UI_ConnectionStatusGameObject.SetActive(false);
+            UI_LoginGameObject.SetActive(false);
+        }
+        else
+        {
+            UI_LobbyGameObject.SetActive(false);
+            UI_3DGameObject.SetActive(false);
+            UI_ConnectionStatusGameObject.SetActive(false);
+            UI_LoginGameObject.SetActive(true);
+        }
     }
 
-    
+
     void Update()
     {
-        if(showConnectStatus)
+        if (showConnectStatus)
         {
             connectionStatusText.text = "Connection Status: " + PhotonNetwork.NetworkClientState;
         }
@@ -56,7 +66,7 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     {
         string playerName = playerNameInputField.text;
 
-        if(!string.IsNullOrEmpty(playerName))
+        if (!string.IsNullOrEmpty(playerName))
         {
             UI_LobbyGameObject.SetActive(false);
             UI_3DGameObject.SetActive(false);
