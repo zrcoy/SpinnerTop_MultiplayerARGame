@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
+using UnityEngine.SceneManagement;
 
 public class LobbyManager : MonoBehaviourPunCallbacks
 {
@@ -16,9 +17,15 @@ public class LobbyManager : MonoBehaviourPunCallbacks
 
     [Header("Connection Status UI")]
     public GameObject UI_ConnectionStatusGameObject;
+    public Text connectionStatusText;
+    public bool showConnectStatus = false;
+
+
+
+
 
     #region Unity Methods
-    // Start is called before the first frame update
+    
     void Start()
     {
         UI_LobbyGameObject.SetActive(false);
@@ -28,30 +35,38 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         UI_LoginGameObject.SetActive(true);
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        
+        if(showConnectStatus)
+        {
+            connectionStatusText.text = "Connection Status: " + PhotonNetwork.NetworkClientState;
+        }
     }
     #endregion
+
+
+
+
+
 
     #region UI Callback Methods
 
     public void OnEnterGameButtonClicked()
     {
-
-        UI_LobbyGameObject.SetActive(false);
-        UI_3DGameObject.SetActive(false);
-        UI_LoginGameObject.SetActive(false);
-        
-        UI_ConnectionStatusGameObject.SetActive(true);
-        
-
         string playerName = playerNameInputField.text;
 
         if(!string.IsNullOrEmpty(playerName))
         {
-            if(!PhotonNetwork.IsConnected)
+            UI_LobbyGameObject.SetActive(false);
+            UI_3DGameObject.SetActive(false);
+            UI_LoginGameObject.SetActive(false);
+
+            UI_ConnectionStatusGameObject.SetActive(true);
+
+            showConnectStatus = true;
+
+            if (!PhotonNetwork.IsConnected)
             {
                 PhotonNetwork.LocalPlayer.NickName = playerName;
 
@@ -64,7 +79,21 @@ public class LobbyManager : MonoBehaviourPunCallbacks
         }
     }
 
+
+    public void OnQuickMatchButtonClicked()
+    {
+        //SceneManager.LoadScene("Scene_Loading");
+        SceneLoader.Instance.LoadScene("Scene_PlayerSelection");
+    }
+
     #endregion
+
+
+
+
+
+
+
 
 
 
@@ -78,6 +107,13 @@ public class LobbyManager : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         Debug.Log(PhotonNetwork.LocalPlayer.NickName + " is connected to Photon Server.");
+
+        UI_LobbyGameObject.SetActive(true);
+        UI_3DGameObject.SetActive(true);
+        UI_LoginGameObject.SetActive(false);
+
+        UI_ConnectionStatusGameObject.SetActive(false);
+
     }
 
     #endregion

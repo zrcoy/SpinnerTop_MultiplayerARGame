@@ -12,7 +12,7 @@ public class MovementController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        m_rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -35,18 +35,18 @@ public class MovementController : MonoBehaviour
         Vector3 inputVel = GetInputDir() * speed;//velocity per frame
         if (inputVel != Vector3.zero)
         {
-            Vector3 vel = rb.velocity;
+            Vector3 vel = m_rb.velocity;
             Vector3 deltaVel = inputVel - vel;
             deltaVel.y = 0;
             deltaVel.x = Mathf.Clamp(deltaVel.x, -maxDeltaVelocity, maxDeltaVelocity);
             deltaVel.z = Mathf.Clamp(deltaVel.z, -maxDeltaVelocity, maxDeltaVelocity);
 
-            rb.AddForce(deltaVel, ForceMode.Acceleration);
+            m_rb.AddForce(deltaVel, ForceMode.Acceleration);
         }
 
     }
 
 
     // private member variables
-    private Rigidbody rb = null;
+    private Rigidbody m_rb = null;
 }

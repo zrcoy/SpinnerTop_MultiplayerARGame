@@ -11,7 +11,7 @@ public class Spinner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        m_rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -23,5 +23,5 @@ public class Spinner : MonoBehaviour
         }
     }
 
-    private Rigidbody rb = null;
+    private Rigidbody m_rb = null;
 }

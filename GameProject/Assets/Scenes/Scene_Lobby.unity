@@ -220,7 +220,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &213413510
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,7 +709,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &678248422
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1825,6 +1825,8 @@ MonoBehaviour:
   UI_LobbyGameObject: {fileID: 678248421}
   UI_3DGameObject: {fileID: 213413509}
   UI_ConnectionStatusGameObject: {fileID: 644936267}
+  connectionStatusText: {fileID: 1209188605}
+  showConnectStatus: 0
 --- !u!4 &1227460505
 Transform:
   m_ObjectHideFlags: 0
@@ -1927,7 +1929,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1.0812e-41, z: 0, w: 6.2573235e-10}
+  m_BoundingSphereOverride: {x: 0, y: 8.84e-42, z: 0, w: 6.366463e-10}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2266,8 +2268,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
+      - m_Target: {fileID: 1227460504}
+        m_TargetAssemblyTypeName: LobbyManager, Assembly-CSharp
         m_MethodName: OnQuickMatchButtonClicked
         m_Mode: 1
         m_Arguments:
@@ -2876,7 +2878,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1867033496
 MonoBehaviour:
   m_ObjectHideFlags: 0
