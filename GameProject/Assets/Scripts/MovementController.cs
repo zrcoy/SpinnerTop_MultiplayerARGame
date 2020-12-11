@@ -46,6 +46,11 @@ public class MovementController : MonoBehaviour
 
     }
 
+    public Joystick GetJoystick()
+    {
+        return joyStick;
+    }
+
 
     // private member variables
     private Rigidbody m_rb = null;

@@ -401,6 +401,7 @@ GameObject:
   - component: {fileID: 2223090438577583989}
   - component: {fileID: 3701297865340961563}
   - component: {fileID: 4626108142984035069}
+  - component: {fileID: -2816972083299362728}
   m_Layer: 0
   m_Name: Player3_Defender
   m_TagString: Player
@@ -546,6 +547,19 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &-2816972083299362728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2269595059983960058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47fd72d76e8ebb43b5cb9378225a952, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerNameText: {fileID: 2269595060351980992}
 --- !u!1 &2269595060150874238
 GameObject:
   m_ObjectHideFlags: 0
