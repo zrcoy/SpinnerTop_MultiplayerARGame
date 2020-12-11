@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637433173717355029
+      ticks: 637433184270786471
     m_Hash: 4063612864
   m_LockFileStatus:
     m_FilePath: D:/Projects/Unity Projects/SpinnerTop_MultiplayerARGame/GameProject/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637433173962849399
+      ticks: 637433184505419791
     m_Hash: 3502454500
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
