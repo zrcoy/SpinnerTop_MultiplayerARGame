@@ -181,6 +181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -406,6 +407,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &213413512
 Canvas:
   m_ObjectHideFlags: 0
@@ -501,6 +503,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -587,7 +590,7 @@ LightingSettings:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Settings.lighting
-  serializedVersion: 2
+  serializedVersion: 3
   m_GIWorkflowMode: 0
   m_EnableBakedLightmaps: 1
   m_EnableRealtimeLightmaps: 1
@@ -609,7 +612,7 @@ LightingSettings:
   m_MixedBakeMode: 2
   m_LightmapsBakeMode: 1
   m_FilterMode: 1
-  m_LightmapParameters: {fileID: 0}
+  m_LightmapParameters: {fileID: 15204, guid: 0000000000000000f000000000000000, type: 0}
   m_ExportTrainingData: 0
   m_TrainingDataDestination: TrainingData
   m_RealtimeResolution: 2
@@ -626,7 +629,7 @@ LightingSettings:
   m_PVREnvironmentReferencePointCount: 2048
   m_LightProbeSampleCountMultiplier: 4
   m_PVRBounces: 2
-  m_PVRRussianRouletteStartBounce: 2
+  m_PVRMinBounces: 1
   m_PVREnvironmentMIS: 0
   m_PVRFilteringMode: 2
   m_PVRDenoiserTypeDirect: 0
@@ -658,9 +661,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af3fb3abc8050014b890c08245fceef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinSpeed: 100
-  doSpin: 1
-  playerGraphics: {fileID: 285338171}
+  _spinSpeed: 100
+  _doSpin: 1
+  _playerGraphics: {fileID: 285338171}
 --- !u!1001 &326682647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1081,6 +1084,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &678248425
 Canvas:
   m_ObjectHideFlags: 0
@@ -1178,6 +1182,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 3.0092666e-36, y: 1.009742e-28, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &705507995
@@ -1762,6 +1767,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -1891,9 +1897,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af3fb3abc8050014b890c08245fceef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinSpeed: 100
-  doSpin: 1
-  playerGraphics: {fileID: 1115944212}
+  _spinSpeed: 100
+  _doSpin: 1
+  _playerGraphics: {fileID: 1115944212}
 --- !u!1 &1154788272
 GameObject:
   m_ObjectHideFlags: 0
@@ -2067,6 +2073,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1222578111
 Canvas:
   m_ObjectHideFlags: 0
@@ -2178,6 +2185,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 2.476e-42, y: 1.05e-43, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!1 &1237791869
@@ -2233,6 +2241,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -2365,6 +2374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -2582,9 +2592,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af3fb3abc8050014b890c08245fceef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinSpeed: 100
-  doSpin: 1
-  playerGraphics: {fileID: 1558967585}
+  _spinSpeed: 100
+  _doSpin: 1
+  _playerGraphics: {fileID: 1558967585}
 --- !u!1 &1571653638
 GameObject:
   m_ObjectHideFlags: 0
@@ -2638,6 +2648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Navigation:
     m_Mode: 3
+    m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
@@ -3872,6 +3883,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 4.278e-42, y: 1.02e-43, z: 7.55e-43, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &2080774247
@@ -3905,9 +3917,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af3fb3abc8050014b890c08245fceef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinSpeed: 100
-  doSpin: 1
-  playerGraphics: {fileID: 2081584274}
+  _spinSpeed: 100
+  _doSpin: 1
+  _playerGraphics: {fileID: 2081584274}
 --- !u!222 &6481787435205322017
 CanvasRenderer:
   m_ObjectHideFlags: 0

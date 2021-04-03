@@ -367,6 +367,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &1802076417165274031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,6 +614,7 @@ GameObject:
   - component: {fileID: 2663465720377491894}
   - component: {fileID: -5967050523532395054}
   - component: {fileID: 8587064231334464125}
+  - component: {fileID: 5867413024203807613}
   m_Layer: 0
   m_Name: Player2_Attacker
   m_TagString: Player
@@ -707,9 +709,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af3fb3abc8050014b890c08245fceef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinSpeed: 2800
-  doSpin: 1
-  playerGraphics: {fileID: 1802076418753269999}
+  _spinSpeed: 3600
+  _doSpin: 1
+  _playerGraphics: {fileID: 9066997205262484205}
 --- !u!114 &2663465720377491894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -758,6 +760,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6667556133787024c99870b745281085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncVelocity: 1
+  synvAngularVelocity: 1
+  isTeleportEnabled: 1
+  teleportIfDistanceGreaterThan: 1
+--- !u!114 &5867413024203807613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802076417471478439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f43df47d56db147b191d114ade7cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uI3DgameObject: {fileID: 1802076417165274025}
+  deathUIPanelPrefab: {fileID: 3593783272886976281, guid: 0367e5d2c0c49da4b80c7fe1c169056c, type: 3}
+  spinnerScript: {fileID: 7373564100380833970}
+  spinSpeedBar_Image: {fileID: 1802076416973763616}
+  spinSpeedRatio_Text: {fileID: 100848075634437743}
+  common_Damage_Coefficient: 0.04
+  isAttacker: 0
+  isDefender: 0
+  doDamage_Coefficient_Attacker: 10
+  getDamaged_Coefficient_Attacker: 1.2
+  doDamage_Coefficient_Defender: 0.75
+  getDamaged_Coefficient_Defender: 0.2
 --- !u!1 &1802076418753269999
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,6 +901,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &5188021760368750171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1189,5 +1220,10 @@ GameObject:
 --- !u!4 &5444614676719055102 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2770987814479266854, guid: 52a6dbac7e6878441a0bf1d7d8a69606, type: 3}
+  m_PrefabInstance: {fileID: 7925119901819122904}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9066997205262484205 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1166396451407787573, guid: 52a6dbac7e6878441a0bf1d7d8a69606, type: 3}
   m_PrefabInstance: {fileID: 7925119901819122904}
   m_PrefabAsset: {fileID: 0}

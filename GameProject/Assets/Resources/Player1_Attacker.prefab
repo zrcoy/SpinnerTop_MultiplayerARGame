@@ -289,6 +289,7 @@ GameObject:
   - component: {fileID: 623645026353873765}
   - component: {fileID: 8320974081646747607}
   - component: {fileID: 8607932471107834359}
+  - component: {fileID: -2871025989851368290}
   m_Layer: 0
   m_Name: Player1_Attacker
   m_TagString: Player
@@ -383,9 +384,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af3fb3abc8050014b890c08245fceef5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spinSpeed: 2800
-  doSpin: 1
-  playerGraphics: {fileID: 2523371895095917476}
+  _spinSpeed: 3600
+  _doSpin: 1
+  _playerGraphics: {fileID: 6356971495552973872}
 --- !u!114 &623645026353873765
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,6 +435,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6667556133787024c99870b745281085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  syncVelocity: 1
+  synvAngularVelocity: 1
+  isTeleportEnabled: 1
+  teleportIfDistanceGreaterThan: 1
+--- !u!114 &-2871025989851368290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2523371896380985836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7f43df47d56db147b191d114ade7cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  uI3DgameObject: {fileID: 2523371896678793442}
+  deathUIPanelPrefab: {fileID: 3593783272886976281, guid: 0367e5d2c0c49da4b80c7fe1c169056c, type: 3}
+  spinnerScript: {fileID: 1028097501951056359}
+  spinSpeedBar_Image: {fileID: 2523371896873197419}
+  spinSpeedRatio_Text: {fileID: 4278660854099477796}
+  common_Damage_Coefficient: 0.04
+  isAttacker: 0
+  isDefender: 0
+  doDamage_Coefficient_Attacker: 10
+  getDamaged_Coefficient_Attacker: 1.2
+  doDamage_Coefficient_Defender: 0.75
+  getDamaged_Coefficient_Defender: 0.2
 --- !u!1 &2523371896480695252
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,6 +758,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
 --- !u!114 &2523371896678793444
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -978,6 +1008,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &9077319402978166032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1181,13 +1212,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a21e79c256cb774aa7b7aad3fe982af, type: 3}
---- !u!1 &423723676981237891 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7511576053577792428, guid: 7a21e79c256cb774aa7b7aad3fe982af, type: 3}
-  m_PrefabInstance: {fileID: 7917087279287771951}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7954243406276922915 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 269093183157644556, guid: 7a21e79c256cb774aa7b7aad3fe982af, type: 3}
+  m_PrefabInstance: {fileID: 7917087279287771951}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6356971495552973872 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3884173310291992351, guid: 7a21e79c256cb774aa7b7aad3fe982af, type: 3}
+  m_PrefabInstance: {fileID: 7917087279287771951}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &423723676981237891 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7511576053577792428, guid: 7a21e79c256cb774aa7b7aad3fe982af, type: 3}
   m_PrefabInstance: {fileID: 7917087279287771951}
   m_PrefabAsset: {fileID: 0}

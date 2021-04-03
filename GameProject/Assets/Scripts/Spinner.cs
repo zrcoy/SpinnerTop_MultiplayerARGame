@@ -4,24 +4,30 @@ using UnityEngine;
 
 public class Spinner : MonoBehaviour
 {
-    [SerializeField] float spinSpeed = 2800.0f;
-    [SerializeField] bool doSpin = true;
-    [SerializeField] GameObject playerGraphics = null;
+    [SerializeField] float _spinSpeed = 3600.0f;
+    [SerializeField] bool _doSpin = true;
+    [SerializeField] GameObject _playerGraphics = null;
 
     // Start is called before the first frame update
     void Start()
     {
-        m_rb = GetComponent<Rigidbody>();
+        _rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(doSpin)
+        if(_doSpin)
         {
-            playerGraphics.transform.Rotate(new Vector3(0, spinSpeed * Time.deltaTime, 0));
+            _playerGraphics.transform.Rotate(new Vector3(0, _spinSpeed * Time.deltaTime, 0));
         }
     }
 
-    private Rigidbody m_rb = null;
+    public float SpinSpeed 
+    {
+        get { return _spinSpeed; } 
+        set { _spinSpeed = value; }
+    }
+
+    private Rigidbody _rb = null;
 }
